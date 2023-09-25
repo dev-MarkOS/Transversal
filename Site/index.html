@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transversal</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" href="docs/lock.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="bg.css">
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            text-align: center;
+        }
+        
+        .carousel-item {
+            background-color: #f0f0f0;
+        }
+        
+        .carousel-item img {
+            max-width: 100%;
+            max-height: 100%;
+            height: 650px;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="myCarousel" class="carousel slide mt-2">
+        <!-- Indicadores de Slide -->
+        <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ul>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                    <img src="docs/Slide1.jpg" alt="Slide 1">
+                    <div class="carousel-caption">
+                    </div>
+            </div>
+            <div class="carousel-item">
+                    <img src="docs/Slide2.jpg" alt="Slide 2">
+                    <div class="carousel-caption">
+                    </div>
+            </div>
+            <div class="carousel-item">
+                    <img src="docs/Slide3.jpg" alt="Slide 3">
+                    <div class="carousel-caption">
+                    </div>
+            </div>
+            <div class="carousel-item">
+                    <img src="docs/Slide4.jpg" alt="Slide 4">
+                    <div class="carousel-caption">
+                    </div>
+            </div>
+                <div class="carousel-item">
+                    <img src="docs/Slide5.jpg" alt="Slide 5">
+                    <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(document).keydown(function(e) {
+            if (e.keyCode == 37) {
+                // Tecla esquerda
+                $('#myCarousel').carousel('prev');
+            } else if (e.keyCode == 39) {
+                // Tecla direita
+                $('#myCarousel').carousel('next');
+            }
+        });
+    });
+</script>
+<div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+    </div>
+</body>
+</html>
